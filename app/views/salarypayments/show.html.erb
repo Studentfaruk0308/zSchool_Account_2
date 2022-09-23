@@ -1,0 +1,43 @@
+<h3 class="center"> FOLLOWING ARE THE DETAILS OF SALARY PAYMENT "<%= @salarypayment.salarypayment_code %>"</h3>
+
+<div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>DESCRIPTION</th>
+            <th>VALUE</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>CODE OF THIS SALARY PAYMENT:</td>
+            <td><%= @salarypayment.salarypayment_code %></td>
+          </tr>
+          <tr>
+          <td>DATE OF PAYMENT:</td>
+          <td><%= @salarypayment.date_of_payment %></td>
+          </tr>
+          <tr>
+          <td>AMOUNT OF PAYMENT:</td>
+          <td><%= @salarypayment.amount_of_payment %></td>
+          </tr>
+          <tr>
+          <td>TEACHER ID:</td>
+          <td><%= @salarypayment.teacher_id %></td>
+          </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+
+<table class="center">
+      <thead>
+        <tr>
+            <th><%= link_to "DELETE", @salarypayment, method: :delete, data: { confirm: "Really want to DELETE the TuitionFee category #{@salarypayment.to_s}?" } %></th>
+            <th><%= link_to "UPDATE", edit_salarypayment_path(@salarypayment) %></th>
+            <th><%= link_to "BACK", salarypayments_path %></th>
+        </tr>
+      </thead>
+</table>

@@ -1,0 +1,16 @@
+<h1>Recording a NEW SALARY PAYMENT</h1>
+<%= form_for(@salarypayment) do |f| %>
+  <label>Salary Payment Code:</label><br>
+  <%= f.text_field :salarypayment_code %><br>
+
+  <label>Date of Payment</label><br>
+  <%= f.text_area :date_of_payment %><br>
+
+  <label>Amount of Payment</label><br>
+  <%= f.text_area :amount_of_payment %><br>
+
+    <label>TEACHER ID</label><br>
+  <%= f.text_area :teacher_id %><br>
+
+  <%= f.submit %>
+<% end %>

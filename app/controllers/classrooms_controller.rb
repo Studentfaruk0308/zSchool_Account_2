@@ -1,7 +1,7 @@
 class ClassroomsController < ApplicationController
 
     def index
-		@classroos = Classroom.all
+		@classrooms = Classroom.all
 	end
 
     def new
@@ -18,7 +18,7 @@ class ClassroomsController < ApplicationController
     end
   
     def show
-        @salary = Classroom.find(params[:id])
+        @classroom = Classroom.find(params[:id])
     end
   
      
