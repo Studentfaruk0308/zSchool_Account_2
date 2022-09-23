@@ -1,0 +1,37 @@
+  <h1 class="center">All Classrooms</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>CLASSROOM ID</th>
+            <th>CLASSROOM CODE</th>
+            <th>CLASSROOM NAME</th>
+            <th>CLASSROOM GENDER</th>
+            <th>CLASSROOM TEACHER ID</th>         
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @classrooms.each do |room| %>
+          <tr>
+            <td><%= room.id %></td>
+            <td><%= room.classroom_code %></td>
+            <td><%= room.classroom_name %></td>
+            <td><%= room.classroom_gender %></td>
+            <td><%= room.teacher_id %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", classrooms_path(@classroom) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Create a New Classroom", new_classroom_path %></th>
+        </tr>
+      </thead>
+</table>

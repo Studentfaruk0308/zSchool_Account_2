@@ -1,0 +1,10 @@
+<h1>Creating a NEW SALARY Category</h1>
+<%= form_for(@salary) do |f| %>
+  <label>Salary Code:</label><br>
+  <%= f.text_field :salary_code %><br>
+
+  <label>Fortnightly Salary</label><br>
+  <%= f.text_area :fortnightly_salary %><br>
+
+  <%= f.submit %>
+<% end %>

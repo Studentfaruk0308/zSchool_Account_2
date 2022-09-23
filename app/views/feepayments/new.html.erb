@@ -1,0 +1,16 @@
+<h1>Creating a New Fee Payment</h1>
+<%= form_for(@feepayment) do |f| %>
+  <label>Fee Payment Code:</label><br>
+  <%= f.text_field :feepayment_code %><br>
+
+  <label>Date of Payment</label><br>
+  <%= f.text_area :date_of_payment %><br>
+
+  <label>Amount of Payment</label><br>
+  <%= f.text_area :amount_of_payment %><br> 
+
+    <label>Student ID</label><br>
+  <%= f.text_area :student_id %><br>
+
+  <%= f.submit %>
+<% end %>

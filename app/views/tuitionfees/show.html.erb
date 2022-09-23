@@ -1,0 +1,50 @@
+<h3 class="center"> FOLLOWING ARE THE DETAILS OF TUITION CATEGORY "<%= @tuitionfee.tuitionfee_code %>"</h3>
+
+<div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>DESCRIPTION</th>
+            <th>VALUE</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>CODE OF THIS TUITION FEE:</td>
+            <td><%= @tuitionfee.tuitionfee_code %></td>
+          </tr>
+          <tr>
+          <td>FEE OF TERM-1:</td>
+          <td><%= @tuitionfee.term_1_fee %></td>
+          </tr>
+          <tr>
+          <td>FEE OF TERM-2:</td>
+          <td><%= @tuitionfee.term_2_fee %></td>
+          </tr>
+          <tr>
+          <td>FEE OF TERM-3:</td>
+          <td><%= @tuitionfee.term_3_fee %></td>
+          </tr>
+          <tr>
+          <td>FEE OF TERM-4:</td>
+          <td><%= @tuitionfee.term_4_fee %></td>
+          </tr>
+          <tr>
+          <td>FEE OF FULL YEAR:</td>
+          <td><%= @tuitionfee.full_year_fee %></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+
+<table class="center">
+      <thead>
+        <tr>
+            <th><%= link_to "DELETE", @tuitionfee, method: :delete, data: { confirm: "Really want to DELETE the TuitionFee category #{@tuitionfee.to_s}?" } %></th>
+            <th><%= link_to "UPDATE", edit_tuitionfee_path(@tuitionfee) %></th>
+            <th><%= link_to "BACK", tuitionfees_path %></th>
+        </tr>
+      </thead>
+</table>

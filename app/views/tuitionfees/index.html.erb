@@ -1,0 +1,41 @@
+  <h1 class="center">All Tuition Fees</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>TUITION_FEE_ID</th>
+            <th>TUITIONFEE_CODE</th> 
+            <th>TERM_1_FEE</th>
+            <th>TERM_2_FEE</th>
+            <th>TERM_3_FEE</th>
+            <th>TERM_4_FEE</th>
+            <th>FEE FOR FULL YEAR</th>
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @tuitionfees.each do |fee| %>
+          <tr>
+            <td><%= fee.id %></td>
+            <td><%= fee.tuitionfee_code %></td>
+            <td><%= fee.term_1_fee %></td>
+            <td><%= fee.term_2_fee %></td>
+            <td><%= fee.term_3_fee %></td>
+            <td><%= fee.term_4_fee %></td>
+            <td><%= fee.full_year_fee %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", tuitionfees_path(@tuitionfee) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Create New Tuition Fee", new_tuitionfee_path %></th>
+        </tr>
+      </thead>
+</table>

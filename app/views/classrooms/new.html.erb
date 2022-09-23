@@ -1,0 +1,16 @@
+<h1>Creating a New Classroom</h1>
+<%= form_for(@classroom) do |f| %>
+  <label>Classroom Code:</label><br>
+  <%= f.text_field :classroom_code %><br>
+
+  <label>Classroom Name</label><br>
+  <%= f.text_area :classroom_name %><br>
+
+  <label>Classroom Gender</label><br>
+  <%= f.text_area :classroom_gender %><br> 
+
+    <label>Teacher ID</label><br>
+  <%= f.text_area :teacher_id %><br>
+
+  <%= f.submit %>
+<% end %>

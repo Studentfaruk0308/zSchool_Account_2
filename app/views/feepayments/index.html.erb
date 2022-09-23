@@ -1,0 +1,37 @@
+  <h1 class="center">All Fee Payment Records</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>FEE PAYMENT ID</th>
+            <th>FEE PAYMENT CODE</th>
+            <th>DATE OF PAYMENT</th>
+            <th>AMOUNT OF PAYMENT</th>
+            <th>STUDENT ID</th>         
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @feepayments.each do |fee| %>
+          <tr>
+            <td><%= fee.id %></td>
+            <td><%= fee.feepayment_code %></td>
+            <td><%= fee.date_of_payment %></td>
+            <td><%= fee.amount_of_payment %></td>
+            <td><%= fee.student_id %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", feepayments_path(@feepayment) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Record a New Fee Payment", new_feepayment_path %></th>
+        </tr>
+      </thead>
+</table>

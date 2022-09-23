@@ -1,0 +1,33 @@
+  <h1 class="center">All Salary Categories</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>SALARY ID</th>
+            <th>SALARY CODE</th>
+            <th>FORTNIGHTLY SALARY</th>
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @salaries.each do |amount| %>
+          <tr>
+            <td><%= amount.id %></td>
+            <td><%= amount.salary_code %></td>
+            <td><%= amount.fortnightly_salary %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", salaries_path(@salary) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Create Salary Category", new_salary_path %></th>
+        </tr>
+      </thead>
+</table>
