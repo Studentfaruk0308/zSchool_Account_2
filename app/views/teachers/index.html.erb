@@ -1,0 +1,47 @@
+  <h1 class="center">All Teacher's Data</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>TEACHER ID</th>
+            <th>TEACHER CODE</th>
+            <th>TEACHER's NAME</th>
+            <th>TEACHER's EMAIL</th>
+            <th>TEACHER's HOME ADDRESS</th>
+            <th>TEACHER's MOBILE NUMBER</th>
+            <th>TEACHER's GENDER</th>
+            <th>ENGAGEMENT DATE</th> 
+            <th>TEACHER's BANKDETAILS</th>
+            <th>TEACHER's SALARY ID</th>
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @teachers.each do |teacher| %>
+          <tr>
+            <td><%= teacher.id %></td>
+            <td><%= teacher.teacher_code %></td>
+            <td><%= teacher.teacher_name %></td>
+            <td><%= teacher.teacher_email %></td>
+            <td><%= teacher.teacher_homeaddress %></td>
+            <td><%= teacher.teacher_mobile_number %></td>
+            <td><%= teacher.teacher_gender %></td>
+            <td><%= teacher.engagement_date %></td>
+            <td><%= teacher.teacher_bankdetails %></td>
+            <td><%= teacher.salary_id %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", teachers_path(@teacher) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Create a Teacher Data", new_teacher_path %></th>
+        </tr>
+      </thead>
+</table>

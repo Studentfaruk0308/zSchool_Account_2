@@ -1,0 +1,51 @@
+  <h1 class="center">All Student's Data</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>STUDENT ID</th>
+            <th>STUDETN CODE</th>
+            <th>NAME OF STUDENT</th>
+            <th>DATE OF BIRTH</th>
+            <th>CONTACT EMAIL ID</th>
+            <th>HOME ADDRESS</th>
+            <th>CONTACT MOBILE NUMBER</th>
+            <th>GENDER OF STUDENT</th>
+            <th>NAME OF PARENT</th>
+            <th>DATE OF ENROLMENT</th>
+            <th>CLASSROOM ID</th>
+            <th>TUITION FEE ID</th>
+            <th>DETAILS/UPDATE/DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @students.each do |s| %>
+          <tr>
+            <td><%= s.id %></td>
+            <td><%= s.student_code %></td>
+            <td><%= s.student_name %></td>
+            <td><%= s.student_date_of_birth %></td>
+            <td><%= s.student_email %></td>
+            <td><%= s.student_homeaddress %></td>
+            <td><%= s.student_mobile_number %></td>
+            <td><%= s.student_gender %></td>
+            <td><%= s.student_parent_name %></td>
+            <td><%= s.enrolled_date %></td>
+            <td><%= s.classroom_id %></td>
+            <td><%= s.tuitionfee_id %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", students_path(@student) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<table class="center">
+      <thead>
+        <tr>
+          <th><%= link_to "+ Create a Student Data", new_student_path %></th>
+        </tr>
+      </thead>
+</table>
