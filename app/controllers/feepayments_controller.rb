@@ -49,4 +49,8 @@ class FeepaymentsController < ApplicationController
         params.require(:feepayment).permit(:feepayment_code, :date_of_payment, :amount_of_payment, :student_id)
     end
 
+    def student_params
+        params.require(:student).permit(:student_id)
+    end
+
 end

@@ -35,7 +35,7 @@
       <thead>
         <tr>
             <th><%= link_to "DELETE", @feepayment, method: :delete, data: { confirm: "Really want to DELETE this Fee Payment #{@feepayment.to_s}?" } %></th>
-            <th><%= link_to "UPDATE", edit_feepayment_path(@salary) %></th>
+            <th><%= link_to "UPDATE", edit_feepayment_path(@feepayment) %></th>
             <th><%= link_to "BACK", feepayments_path %></th>
         </tr>
       </thead>

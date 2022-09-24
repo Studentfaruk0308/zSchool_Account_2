@@ -46,5 +46,12 @@ class StudentsController < ApplicationController
         params.require(:student).permit(:student_code, :student_name, :student_date_of_birth, :student_email, :student_homeaddress, :student_mobile_number, :student_gender, :student_parent_name, :enrolled_date, :classroom_id, :tuitionfee_id)
     end
 
+    def classroom_params
+        params.require(:classroom).permit(:classroom_id)
+    end
+
+    def tuitionfee_params
+        params.require(:tuitionfee).permit(:tuitionfee_id)
+    end
 
 end

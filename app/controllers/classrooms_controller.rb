@@ -46,4 +46,8 @@ class ClassroomsController < ApplicationController
         params.require(:classroom).permit(:classroom_code, :classroom_name, :classroom_gender, :teacher_id)
     end
 
+    def teacher_params
+        params.require(:teacher).permit(:teacher_id)
+    end
+
 end
