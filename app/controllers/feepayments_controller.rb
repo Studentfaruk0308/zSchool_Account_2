@@ -9,6 +9,9 @@ class FeepaymentsController < ApplicationController
     end
   
     def create
+        # @feepayment = Feepayment.create(feepayment_params)
+        # redirect_to feepayment_path(@feepayment)
+
         @feepayment = Feepayment.new(feepayment_params)
         if @feepayment.save
         redirect_to feepayment_path(@feepayment)
