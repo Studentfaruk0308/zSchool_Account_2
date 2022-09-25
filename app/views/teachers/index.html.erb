@@ -30,7 +30,7 @@
             <td><%= teacher.engagement_date %></td>
             <td><%= teacher.teacher_bankdetails %></td>
             <td><%= teacher.salary_id %></td>
-            <td><%= link_to "DETAILS/UPDATE/DELETE", teachers_path(@teacher) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", teacher_path(teacher) %></td>
           </tr>
         <% end %>
       </tbody>

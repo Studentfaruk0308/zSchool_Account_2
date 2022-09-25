@@ -1,5 +1,8 @@
 <h1>Creating a NEW SALARY Category</h1>
 <%= form_for(@salary) do |f| %>
+  <label>Salary ID:</label><br>
+  <%= f.text_field :id %><br>
+
   <label>Salary Code:</label><br>
   <%= f.text_field :salary_code %><br>
 

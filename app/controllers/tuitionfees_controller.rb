@@ -43,7 +43,7 @@ class TuitionfeesController < ApplicationController
     private
   
     def tuitionfee_params
-        params.require(:tuitionfee).permit(:tuitionfee_code, :term_1_fee, :term_2_fee, :term_3_fee, :term_4_fee, :full_year_fee)
+        params.require(:tuitionfee).permit(:id,:tuitionfee_code, :term_1_fee, :term_2_fee, :term_3_fee, :term_4_fee, :full_year_fee)
     end
 
 end

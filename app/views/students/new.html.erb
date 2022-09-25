@@ -1,3 +1,20 @@
+<div class="center">
+
+  <% if @student.errors.any? %>
+    <div id="error_explanation" class='validation'>
+      <h2>
+        <%= pluralize(@student.errors.count, "error") %>
+        prohibited creation of this Student:
+      </h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <h1>Creating a NEW STUDENT DATA</h1>
 <%= form_for(@student) do |f| %>
   <label>Student Code:</label><br>
@@ -35,3 +52,5 @@
 
   <%= f.submit %>
 <% end %>
+
+</div>

@@ -22,6 +22,8 @@
 	margin-right: auto;
   }
 
+
+
  :root {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	--primary: #486661;
@@ -268,7 +270,8 @@ th {
 
 textarea {
 	width: 210px;
-	height: 70px;
+	height: 20px;
+	text-align: center;
 }
 
 .list {
@@ -299,10 +302,10 @@ form {
 }
 
 .validation {
-	position: fixed;
+	position: float;
 	height: 80px;
 	width: 100%;
-	bottom: 0px;
+	bottom: 20px;
 	padding-left: 50px;
 	text-align: start;
 	justify-content: center;
@@ -313,6 +316,9 @@ form {
 	overflow: scroll;
 	z-index: 1;
 }
+
+
+
 
 .topnav {
 	overflow: hidden;

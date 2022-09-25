@@ -43,7 +43,7 @@ class ClassroomsController < ApplicationController
     private
   
     def classroom_params
-        params.require(:classroom).permit(:classroom_code, :classroom_name, :classroom_gender, :teacher_id)
+        params.require(:classroom).permit(:id, :classroom_code, :classroom_name, :classroom_gender, :teacher_id)
     end
 
     def teacher_params

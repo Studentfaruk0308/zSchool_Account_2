@@ -43,7 +43,7 @@ class SalarypaymentsController < ApplicationController
     private
   
     def salarypayment_params
-        params.require(:salarypayment).permit(:salarypayment_code, :date_of_payment, :amount_of_payment, :teacher_id)
+        params.require(:salarypayment).permit(:id, :salarypayment_code, :date_of_payment, :amount_of_payment, :teacher_id)
     end
 
     def teacher_params

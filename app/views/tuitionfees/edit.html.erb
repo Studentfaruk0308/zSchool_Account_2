@@ -1,2 +1,29 @@
+<div class="center">
+
 <h1>Editing an Existing TUITION FEE Category</h1>
-<%= render "form" %>
+<%= form_for(@tuitionfee) do |f| %>
+  <label>Tuition Fee ID:</label><br>
+  <%= f.text_field :id %><br>
+
+  <label>Tuition Fee Code:</label><br>
+  <%= f.text_field :tuitionfee_code %><br>
+
+  <label>Term-1 Fee</label><br>
+  <%= f.text_area :term_1_fee %><br>
+
+  <label>Term-2 Fee</label><br>
+  <%= f.text_area :term_2_fee %><br>
+
+  <label>Term-3 Fee</label><br>
+  <%= f.text_area :term_3_fee %><br>
+
+  <label>Term-4 Fee</label><br>
+  <%= f.text_area :term_4_fee %><br>
+
+  <label>Fee for Full Year</label><br>
+  <%= f.text_area :full_year_fee %><br>
+
+  <%= f.submit %>
+<% end %>
+
+</div>
