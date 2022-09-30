@@ -1,0 +1,20 @@
+
+  <% if session[:user_id] %>
+<p>Welcome "<%= @user.name %>" </p>
+<p>Your below Login details are recorded in our system</p>
+  <h1>Name: <%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>User ID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+
+
+
+
+<% else %>
+  <div class='authentication'>
+  <p>No authentication information is available!</p>
+  <p>Try one of the below Sign In Method</p>
+  </div>
+  <div id='developer-options'>Try <%= link_to 'Signing in with the developer strategy', '/auth/developer', method: :post %>.</div>
+  <div id='github-options' style="float: right;">Try <%= link_to 'Signing in with the GitHub strategy', '/auth/github', method: :post %>.</div>
+<% end %>

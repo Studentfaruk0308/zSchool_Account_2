@@ -94,6 +94,55 @@ body {
 	float: left;
 }
 
+.authentication {
+	padding: 1px 1px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #cecfbec5;
+	resize: none;
+	  margin-top: 10px;
+	  margin-left: 10px;
+	  width: 100%;
+	  font-size:40px;
+	  line-height:0px;
+	  color: red;
+	  text-align: center;
+	  justify-content: center;
+  }
+
+#developer-options {
+	/* position: fixed; */
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	height: 250px;
+	width: 450px;
+	font-size:50px; 
+	line-height:50px;
+	color: var(--text);
+	text-align: center;
+	justify-content: center;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+}
+
+#github-options {
+	/* position: fixed; */
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 250px;
+	width: 450px;
+	font-size:50px; 
+	line-height:50px;
+	color: var(--text);
+	text-align: center;
+	justify-content: center;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+}
+
 .main {
 	position: fixed;
 	width: 100%;
@@ -170,7 +219,7 @@ body {
 	text-align: center;
 	justify-content: center;
 	color: var(--text);
-	background-color: var(--secondary);
+	background-color: yellowgreen;
 	z-index: -1;
 }
 
