@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :tuitionfees
 
   root 'welcome#home'
+  # root 'welcome#login'
 
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   
