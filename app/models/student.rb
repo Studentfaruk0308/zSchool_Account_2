@@ -3,6 +3,8 @@ class Student < ApplicationRecord
   belongs_to :tuitionfee
   has_many :feepayments
 
+  before_save :downcase_email
+
 	VALID_NAME_REGEX = /[a-z\s.-]/i
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 	VALID_MOBILE_REGEX = /\A\d{10}\z/
@@ -21,6 +23,10 @@ class Student < ApplicationRecord
 
   def to_s
     return self.student_name
+  end
+
+  def downcase_email
+    self.email = student_email.downcase
   end
 
 end
