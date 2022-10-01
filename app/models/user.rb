@@ -12,6 +12,9 @@ class User < ApplicationRecord
         self.email = email.downcase
     end
 
+    def to_s
+        return self.name
+    end
 
     # FOR GOOGLE
     # def self.from_omniauth(auth)

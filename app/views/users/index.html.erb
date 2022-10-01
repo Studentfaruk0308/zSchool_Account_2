@@ -1,0 +1,28 @@
+<%= render "layouts/header" %>    
+  
+  <h1 class="center">All User's Data</h1>
+
+  <div class='main-centre tableFixHead'>
+    <table class="center">
+      <thead>
+        <tr>
+            <th>USER ID</th>
+            <th>USER UID</th>
+            <th>USER NAME</th>
+            <th>USER EMAIL</th>
+            <th>DELETE USER</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.uid %></td>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= link_to "DETAILS", user_path(user) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

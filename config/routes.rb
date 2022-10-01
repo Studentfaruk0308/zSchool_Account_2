@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :feepayments
   resources :salaries
   resources :tuitionfees
+  resources :users
 
   root 'welcome#home'
   # root 'welcome#login'
