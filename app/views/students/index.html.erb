@@ -16,8 +16,8 @@
             <th>GENDER OF STUDENT</th>
             <th>NAME OF PARENT</th>
             <th>DATE OF ENROLMENT</th>
-            <th>CLASSROOM ID</th>
-            <th>TUITION FEE ID</th>
+            <th>CLASSROOM DETAILS</th>
+            <th>TUITION FEE DETAILS</th>
             <th>DETAILS/UPDATE/DELETE</th>
         </tr>
       </thead>
@@ -34,8 +34,8 @@
             <td><%= s.student_gender %></td>
             <td><%= s.student_parent_name %></td>
             <td><%= s.enrolled_date %></td>
-            <td><%= s.classroom_id %></td>
-            <td><%= s.tuitionfee_id %></td>
+            <td><%= s.details_of_classroom %></td>
+            <td><%= s.details_of_tuitionfee %></td>
             <td><%= link_to "DETAILS/UPDATE/DELETE", student_path(s) %></td>
           </tr>
         <% end %>

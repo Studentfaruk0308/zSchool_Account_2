@@ -10,7 +10,7 @@
             <th>SALARY PAYMENT CODE</th>
             <th>DATE OF PAYMENT</th>
             <th>AMOUNT OF PAYMENT</th>
-            <th>TEACHER_ID</th>         
+            <th>TEACHER NAME</th>         
             <th>DETAILS/UPDATE/DELETE</th>
         </tr>
       </thead>
@@ -21,7 +21,7 @@
             <td><%= amount.salarypayment_code %></td>
             <td><%= amount.date_of_payment %></td>
             <td><%= amount.amount_of_payment %></td>
-            <td><%= amount.teacher_id %></td>         
+            <td><%= amount.name_of_teacher %></td>         
             <td><%= link_to "DETAILS/UPDATE/DELETE", salarypayment_path(amount) %></td>
           </tr>
         <% end %>

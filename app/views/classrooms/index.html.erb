@@ -10,7 +10,7 @@
             <th>CLASSROOM CODE</th>
             <th>CLASSROOM NAME</th>
             <th>CLASSROOM GENDER</th>
-            <th>CLASSROOM TEACHER ID</th>         
+            <th>CLASSROOM TEACHER NAME</th>         
             <th>DETAILS/UPDATE/DELETE</th>
         </tr>
       </thead>
@@ -21,7 +21,7 @@
             <td><%= room.classroom_code %></td>
             <td><%= room.classroom_name %></td>
             <td><%= room.classroom_gender %></td>
-            <td><%= room.teacher_id %></td>
+            <td><%= room.name_of_teacher %></td>
             <td><%= link_to "DETAILS/UPDATE/DELETE", classroom_path(room) %></td>
           </tr>
         <% end %>

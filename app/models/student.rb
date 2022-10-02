@@ -29,4 +29,12 @@ class Student < ApplicationRecord
     self.email = student_email.downcase
   end
 
+
+  def details_of_classroom
+    self.classroom.classroom_name
+  end
+
+  def details_of_tuitionfee
+    self.tuitionfee.tuitionfee_code
+  end
 end

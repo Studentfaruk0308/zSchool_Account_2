@@ -6,4 +6,8 @@ class Classroom < ApplicationRecord
     return self.classroom_name
   end
 
+  def name_of_teacher
+    self.teacher.teacher_name
+  end
+
 end
