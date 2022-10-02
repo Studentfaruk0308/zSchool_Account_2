@@ -5,28 +5,28 @@
 <h1>Creating a NEW TEACHER DATA</h1>
 <%= form_for(@teacher) do |f| %>
   <label>Teacher Code:</label><br>
-  <%= f.text_field :teacher_code %><br>
+  <%= f.text_area :teacher_code, placeholder: "TC202" %><br>
 
   <label>Name of Teacher</label><br>
-  <%= f.text_area :teacher_name %><br>
+  <%= f.text_area :teacher_name, placeholder: "Michael Brent" %><br>
 
   <label>Teacher's Email ID</label><br>
-  <%= f.text_area :teacher_email %><br>
+  <%= f.text_area :teacher_email, placeholder: "brent@yahoo.com" %><br>
 
   <label>Teacher's Home Address</label><br>
-  <%= f.text_area :teacher_homeaddress %><br>
+  <%= f.text_area :teacher_homeaddress, placeholder: "31 Brent Street, Geelong, VIC-3220" %><br>
 
   <label>Teacher's Mobile Number</label><br>
-  <%= f.text_area :teacher_mobile_number %><br>
+  <%= f.text_area :teacher_mobile_number, placeholder: "0412356789" %><br>
 
   <label>Teacher's Gender</label><br>
-  <%= f.text_area :teacher_gender %><br>
+  <%= f.text_area :teacher_gender, placeholder: "Male" %><br>
 
   <label>Teacher's Engagement Date</label><br>
-  <%= f.text_area :engagement_date %><br>
+  <%= f.text_area :engagement_date, placeholder: "01/10/2022" %><br>
 
   <label>Teacher's Bank Details</label><br>
-  <%= f.text_area :teacher_bankdetails %><br>
+  <%= f.text_area :teacher_bankdetails, placeholder: "BSB: 063-540 / ACC: 1048-3220" %><br>
 
   <label>Salary ID of Teacher</label><br>
   <%= f.text_area :salary_id %><br>

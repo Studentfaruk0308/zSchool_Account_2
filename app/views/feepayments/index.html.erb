@@ -22,7 +22,7 @@
             <td><%= fee.date_of_payment %></td>
             <td><%= fee.amount_of_payment %></td>
             <td><%= fee.student_id %></td>
-            <td><%= link_to "DETAILS/UPDATE/DELETE", feepayments_path(@feepayment) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", feepayment_path(fee) %></td>
           </tr>
         <% end %>
       </tbody>

@@ -18,7 +18,7 @@
             <td><%= amount.id %></td>
             <td><%= amount.salary_code %></td>
             <td><%= amount.fortnightly_salary %></td>
-            <td><%= link_to "DETAILS/UPDATE/DELETE", salaries_path(@salary) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", salary_path(amount) %></td>
           </tr>
         <% end %>
       </tbody>

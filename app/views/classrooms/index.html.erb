@@ -22,7 +22,7 @@
             <td><%= room.classroom_name %></td>
             <td><%= room.classroom_gender %></td>
             <td><%= room.teacher_id %></td>
-            <td><%= link_to "DETAILS/UPDATE/DELETE", classrooms_path(@classroom) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", classroom_path(room) %></td>
           </tr>
         <% end %>
       </tbody>

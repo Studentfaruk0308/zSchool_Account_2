@@ -22,7 +22,7 @@
             <td><%= amount.date_of_payment %></td>
             <td><%= amount.amount_of_payment %></td>
             <td><%= amount.teacher_id %></td>         
-            <td><%= link_to "DETAILS/UPDATE/DELETE", salarypayments_path(@salarypayment) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", salarypayment_path(amount) %></td>
           </tr>
         <% end %>
       </tbody>

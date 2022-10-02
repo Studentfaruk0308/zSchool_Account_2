@@ -7,4 +7,8 @@ class Teacher < ApplicationRecord
     return self.teacher_name
   end
 
+  def salary_category
+    self.salary.salary_code
+  end
+
 end

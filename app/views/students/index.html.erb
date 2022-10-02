@@ -36,7 +36,7 @@
             <td><%= s.enrolled_date %></td>
             <td><%= s.classroom_id %></td>
             <td><%= s.tuitionfee_id %></td>
-            <td><%= link_to "DETAILS/UPDATE/DELETE", students_path(@student) %></td>
+            <td><%= link_to "DETAILS/UPDATE/DELETE", student_path(s) %></td>
           </tr>
         <% end %>
       </tbody>
