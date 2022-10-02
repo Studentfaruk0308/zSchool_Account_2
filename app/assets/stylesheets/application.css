@@ -213,15 +213,17 @@ body {
 }
 
 #footer {
-	position: fixed;
-	height: 80px;
+	position: float;
+	height: 40px;
 	width: 100%;
+	margin-top: 400px;
 	bottom: 0px;
 	text-align: center;
 	justify-content: center;
 	color: var(--text);
 	background-color: yellowgreen;
 	z-index: -1;
+	margin-bottom: 10px;
 }
 
 #footer-main {
@@ -319,6 +321,17 @@ th {
 }
 
 textarea {
+	width: 210px;
+	height: 30px;
+	text-align: center;
+}
+
+.textfield {
+	width: 210px;
+	height: 30px;
+	text-align: center;
+}
+.collectionselect {
 	width: 210px;
 	height: 20px;
 	text-align: center;

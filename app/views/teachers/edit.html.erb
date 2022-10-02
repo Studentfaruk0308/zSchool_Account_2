@@ -28,8 +28,8 @@
   <label>Teacher's Bank Details</label><br>
   <%= f.text_area :teacher_bankdetails %><br>
 
-  <label>Salary ID of Teacher</label><br>
-  <%= f.text_area :salary_id %><br>
+  <label>Salary Code of the Teacher</label><br>
+  <%= f.collection_select :salary, Salary.all, :id, :salary_code, { include_blank: false }, { class: "collectionselect" } %><br>
 
   <%= f.submit %>
 <% end %>

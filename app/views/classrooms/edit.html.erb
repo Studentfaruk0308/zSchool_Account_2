@@ -1,5 +1,7 @@
     <%= render "layouts/header" %>  
 
+<div class="center">
+
 <h1>Updating a Classroom</h1>
 <%= form_for(@classroom) do |f| %>
   <label>Classroom Code:</label><br>
@@ -11,8 +13,10 @@
   <label>Classroom Gender</label><br>
   <%= f.text_area :classroom_gender %><br> 
 
-    <label>Teacher ID</label><br>
-  <%= f.text_area :teacher_id %><br>
+    <label>Teacher Name</label><br>
+  <%= f.collection_select :teacher, Teacher.all, :id, :teacher_name, { include_blank: false }, { class: "collectionselect" } %><br>
 
   <%= f.submit %>
 <% end %>
+
+</div>

@@ -1,5 +1,5 @@
     <%= render "layouts/header" %>  
-
+<div class="center">
 <h1>Recording a NEW SALARY PAYMENT</h1>
 <%= form_for(@salarypayment) do |f| %>
   <label>Salary Payment Code:</label><br>
@@ -11,8 +11,10 @@
   <label>Amount of Payment</label><br>
   <%= f.text_area :amount_of_payment %><br>
 
-    <label>TEACHER ID</label><br>
-  <%= f.text_area :teacher_id %><br>
+    <label>TEACHER NAME</label><br>
+  <%= f.collection_select :teacher, Teacher.all, :id, :teacher_name, { include_blank: false }, { class: "collectionselect" } %><br>
 
   <%= f.submit %>
 <% end %>
+
+</div>

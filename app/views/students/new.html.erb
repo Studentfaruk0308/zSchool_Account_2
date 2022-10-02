@@ -46,11 +46,11 @@
   <label>Enrolment Date</label><br>
   <%= f.text_area :enrolled_date %><br>
 
-  <label>Classroom ID</label><br>
-  <%= f.text_area :classroom_id %><br>
+  <label>Classroom Name</label><br>
+  <%= f.collection_select :classroom, Classroom.all, :id, :classroom_name, { include_blank: false }, { class: "collectionselect" } %><br>
 
- <label>Tuition Fee ID</label><br>
-  <%= f.text_area :tuitionfee_id %><br>
+ <label>Tuition Fee Code</label><br>
+  <%= f.collection_select :tuitionfee, Tuitionfee.all, :id, :tuitionfee_code, { include_blank: false }, { class: "collectionselect" } %><br>
 
   <%= f.submit %>
 <% end %>
